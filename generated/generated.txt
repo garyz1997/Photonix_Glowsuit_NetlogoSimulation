@@ -1,0 +1,300 @@
+
+extensions [sound time]
+globals[
+  tick-datetime
+  tick-date
+  tick-day
+  ts
+  p1_1
+  p1_2
+  p1_3
+  p1_4
+  p1_5
+  p1_6
+  p1_7
+  p1_8
+  p2_1
+  p2_2
+  p2_3
+  p2_4
+  p2_5
+  p2_6
+  p2_7
+  p2_8
+  p3_1
+  p3_2
+  p3_3
+  p3_4
+  p3_5
+  p3_6
+  p3_7
+  p3_8
+  p4_1
+  p4_2
+  p4_3
+  p4_4
+  p4_5
+  p4_6
+  p4_7
+  p4_8
+]
+breed [left_arms left_arm]
+breed [right_arms right_arm]
+breed [left_legs left_leg]
+breed [right_legs right_leg]
+breed [head_backs head_back]
+breed [yellow_ps yellow_p]
+breed [red_ps red_p]
+breed [white_bottoms white_bottom]
+
+
+to setup
+  clear-all
+  reset-ticks
+  set-default-shape left_arms "left_arm"
+  set-default-shape right_arms "right_arm"
+  set-default-shape left_legs "left_leg"
+  set-default-shape right_legs "right_leg"
+  set-default-shape head_backs "head_back"
+  set-default-shape yellow_ps "yellow_p"
+  set-default-shape red_ps "red_p"
+  set-default-shape white_bottoms "white_bottom"
+  ask patches [set pcolor black]
+  ;p1
+  create-left_arms 1 [set size 20 set heading 0 set xcor -40 set ycor 5]
+  create-right_arms 1 [set size 20 set heading 0 set xcor -50 set ycor 5]
+  create-left_legs 1 [set size 20 set heading 0 set xcor -43 set ycor -5]
+  create-right_legs 1 [set size 20 set heading 0 set xcor -47 set ycor -5]
+  create-head_backs 1 [set size 20 set heading 0 set xcor -45 set ycor 13]
+  create-yellow_ps 1 [set size 20 set heading 0 set xcor -45 set ycor 7]
+  create-red_ps 1 [set size 20 set heading 0 set xcor -45 set ycor 7]
+  create-white_bottoms 1 [set size 20 set heading 0 set xcor -45 set ycor 3]
+  ;p2
+  create-left_arms 1 [set size 20 set heading 0 set xcor -10 set ycor 5]
+  create-right_arms 1 [set size 20 set heading 0 set xcor -20 set ycor 5]
+  create-left_legs 1 [set size 20 set heading 0 set xcor -13 set ycor -5]
+  create-right_legs 1 [set size 20 set heading 0 set xcor -17 set ycor -5]
+  create-head_backs 1 [set size 20 set heading 0 set xcor -15 set ycor 13]
+  create-yellow_ps 1 [set size 20 set heading 0 set xcor -15 set ycor 7]
+  create-red_ps 1 [set size 20 set heading 0 set xcor -15 set ycor 7]
+  create-white_bottoms 1 [set size 20 set heading 0 set xcor -15 set ycor 3]
+  ;p3
+  create-left_arms 1 [set size 20 set heading 0 set xcor 20 set ycor 5]
+  create-right_arms 1 [set size 20 set heading 0 set xcor 10 set ycor 5]
+  create-left_legs 1 [set size 20 set heading 0 set xcor 17 set ycor -5]
+  create-right_legs 1 [set size 20 set heading 0 set xcor 13 set ycor -5]
+  create-head_backs 1 [set size 20 set heading 0 set xcor 15 set ycor 13]
+  create-yellow_ps 1 [set size 20 set heading 0 set xcor 15 set ycor 7]
+  create-red_ps 1 [set size 20 set heading 0 set xcor 15 set ycor 7]
+  create-white_bottoms 1 [set size 20 set heading 0 set xcor 15 set ycor 3]
+  ;p4
+  create-left_arms 1 [set size 20 set heading 0 set xcor 50 set ycor 5]
+  create-right_arms 1 [set size 20 set heading 0 set xcor 40 set ycor 5]
+  create-left_legs 1 [set size 20 set heading 0 set xcor 47 set ycor -5]
+  create-right_legs 1 [set size 20 set heading 0 set xcor 43 set ycor -5]
+  create-head_backs 1 [set size 20 set heading 0 set xcor 45 set ycor 13]
+  create-yellow_ps 1 [set size 20 set heading 0 set xcor 45 set ycor 7]
+  create-red_ps 1 [set size 20 set heading 0 set xcor 45 set ycor 7]
+  create-white_bottoms 1 [set size 20 set heading 0 set xcor 45 set ycor 3]
+
+  set p1_1 [ 0 1 1 0 0 0 1 1 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 1 1 1 1 0 0 0 0 1 1 1 0 0 0 0 0 1 0 0 0 0 1 1 1 1 1 0 0 0 1 1 1 0 0 1 1 1 0 0 0 0 0 0 1 0 0 1 1 1 0 0 0 0 1 0 1 1 0 1 0 0 0 0 0 1 1 1 0 0 0 1 1 1 1 1 1 1 0 0 0 1 0 0 0 0 0 1 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 1 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 1 1 0 1 1 1 1 1 0 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 0 1 1 0 0 1 1 0 1 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 1 1 0 1 1 0 0 0 1 1 1 1 1 0 0 0 0]
+  set p1_2 [ 0 1 1 0 0 0 1 1 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 1 1 1 1 0 0 0 0 1 1 1 0 0 0 0 0 1 0 0 0 0 1 1 1 1 1 0 0 0 1 1 1 0 0 1 1 1 0 0 0 0 0 0 1 0 0 1 1 1 0 0 0 0 1 0 1 1 0 1 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 1 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 1 1 0 1 1 1 1 1 0 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 0 1 1 0 0 1 1 0 1 0 0 0 1 1 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 1 1 0 1 1 0 0 0 1 1 1 1 1 0 0 0 0]
+  set p1_3 [ 0 1 1 0 1 1 1 1 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 1 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0 1 0 0 0 0 1 1 1 1 1 0 0 0 1 1 1 0 0 1 1 1 1 1 0 1 1 1 1 0 0 1 1 1 1 1 1 0 1 0 1 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 1 0 1 0 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 0 0 0 0 1 0 1 1 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 1 1 0 0 0 0 1 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 0 0 0 0]
+  set p1_4 [ 0 1 1 0 1 1 1 1 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 1 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0 1 0 0 0 0 1 1 1 1 1 0 0 0 1 1 1 0 0 1 1 1 1 1 0 1 1 1 1 0 0 1 1 1 1 1 1 0 1 0 1 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 1 0 1 0 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 0 0 0 0 1 0 1 1 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 1 1 0 0 0 0 1 1 0 0 0 1 1 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 0 0 0 0]
+  set p1_5 [ 0 1 1 0 0 1 1 1 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 1 1 1 0 0 0 0 0 1 1 1 0 0 0 0 0 1 0 0 0 0 1 1 1 1 1 0 0 0 1 1 1 0 0 1 1 1 0 0 0 0 0 1 1 0 0 1 1 1 1 0 0 0 1 0 1 1 0 1 0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 1 0 1 0 0 0 0 0 1 1 1 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 1 0 1 1 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 1 1 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 1 1 1 0 1 1 0 0 0 0 1 1 1 1 1 0 0 0 0]
+  set p1_6 [ 0 1 1 0 0 1 1 1 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 0 1 0 0 0 0 1 1 1 1 1 0 0 0 1 1 1 0 0 1 1 1 1 0 0 0 1 1 1 0 0 1 1 1 1 1 0 0 1 0 1 1 0 1 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 1 1 1 1 0 1 1 0 0 0 1 1 1 1 1 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 0 1 1 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 1 1 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 1 1 0 1 1 1 1 1 0 0 1 1 1 1 1 0 0 0 0]
+  set p1_7 [ 0 1 1 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 1 1 1 0 0 0 0 0 1 1 1 0 0 0 0 0 1 0 0 0 0 1 1 1 1 1 0 0 0 1 1 1 0 0 1 1 1 1 0 0 0 0 1 1 0 0 1 1 1 1 0 0 0 1 0 1 1 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 1 0 1 0 0 0 0 0 1 1 1 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 1 0 1 1 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 1 1 0 0 0 0 0 1 0 0 0 1 1 0 0 0 1 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0 0 1 0 1 0 1 0 1 1 1 0 0 1 1 1 0 1 1 1 1 0 0 1 1 1 1 1 0 0 0 0]
+  set p1_8 [ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0]
+  set p2_1 [ 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 1 0 0 0 0 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 1 1 0 0 0 1 1 1 1 0 1 1 1 1 0 0 0 1 1 0 0 0 0 1 0 0 1 0 1 0 0 0 0 0 1 1 1 0 0 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 1 1 0 1 1 1 0 1 0 1 1 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 0 1 1 1 1 0 0 0 1 1 1 1 1 0 0 0 0]
+  set p2_2 [ 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 1 0 0 0 0 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 1 1 0 0 0 1 1 1 1 0 1 1 1 1 0 0 0 1 1 0 0 0 0 1 0 0 1 0 1 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 1 1 1 1 0 0 0 1 1 1 0 0 0 1 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 1 1 0 1 1 1 0 1 0 1 1 1 1 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 0 1 1 1 1 0 0 0 1 1 1 1 1 0 0 0 0]
+  set p2_3 [ 0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 1 1 1 1 0 0 0 0 0 1 1 0 0 0 1 1 1 0 0 0 0 0 1 1 1 1 0 0 0 1 1 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 1 1 1 1 1 0 1 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 1 1 0 0 0 0 1 1 0 1 1 1 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 1 0 1 1 1 1 1 0 1 1 1 1 1 0 0 0 0]
+  set p2_4 [ 0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 1 1 1 1 0 0 0 0 0 1 1 0 0 0 1 1 1 0 0 0 0 0 1 1 1 1 0 0 0 1 1 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 1 1 1 1 1 0 1 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 1 1 0 0 0 0 1 1 0 1 1 1 1 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 1 0 1 1 1 1 1 0 1 1 1 1 1 0 0 0 0]
+  set p2_5 [ 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 1 1 0 0 0 1 1 1 1 0 0 1 1 1 0 0 0 1 1 1 0 0 0 1 0 0 1 0 1 0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 1 1 0 0 0 0 0 1 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 1 0 1 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 0]
+  set p2_6 [ 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 1 1 1 0 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 1 1 0 0 0 1 1 1 0 0 0 0 1 1 0 0 0 1 1 1 1 0 0 1 0 0 1 0 1 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 1 1 0 0 0 0 0 1 0 1 1 1 1 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 1 1 1 1 0 1 1 1 0 0 1 1 1 1 1 0 0 0 0]
+  set p2_7 [ 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 1 1 0 0 0 1 1 1 0 0 0 1 1 1 0 0 0 1 1 1 0 0 0 1 0 0 1 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 0 0 0 0 0 1 0 1 0 1 0 0 0 0 0 0 0 1 1 1 0 0 1 1 1 0 0 0 0 0 1 0 1 1 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 1 0 1 0 1 1 1 0 0 1 0 1 1 1 1 1 1 0 0 1 1 1 1 1 0 0 0 0]
+  set p2_8 [ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0]
+  set p3_1 [ 0 0 1 1 1 1 0 0 0 0 1 0 0 0 0 1 0 1 0 0 0 1 1 0 1 1 1 1 0 0 1 1 1 1 1 0 0 1 1 1 1 1 1 1 0 0 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 0 0 0 0 1 0 1 1 0 1 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 0 0 1 0 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 0 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 1 0 1 1 1 0 0 0 1 1 1 1 1 0 0 0 0]
+  set p3_2 [ 0 0 1 1 1 1 0 0 0 0 1 0 0 0 0 1 0 1 0 0 0 1 1 0 1 1 1 1 0 0 1 1 1 1 1 0 0 1 1 1 1 1 1 1 0 0 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 0 0 0 0 1 0 1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 1 1 1 0 0 0 1 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 0 0 1 0 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 1 0 1 1 1 0 0 0 1 1 1 1 1 0 0 0 0]
+  set p3_3 [ 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 1 0 1 0 0 0 0 0 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 0 0 1 1 1 1 0 1 1 1 1 0 1 1 1 1 0 0 0 0 0 0 1 0 1 1 1 1 1 1 1 0 1 0 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 1 1 0 1 1 1 1 0 1 1 1 1 1 0 0 0 0]
+  set p3_4 [ 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 1 0 1 0 0 0 0 0 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 0 0 1 1 1 1 0 1 1 1 1 0 1 1 1 1 0 0 0 0 0 0 1 0 1 1 1 1 1 1 1 0 1 0 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 1 1 0 1 1 1 1 0 1 1 1 1 1 0 0 0 0]
+  set p3_5 [ 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 1 0 1 1 1 0 0 0 1 1 1 1 1 0 0 1 1 1 1 1 1 1 0 0 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 1 1 0 0 1 1 1 0 1 1 1 1 1 0 0 0 1 0 1 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 0 1 1 1 1 0 0 0 0 1 0 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 1 1 0 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 0]
+  set p3_6 [ 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 1 0 1 1 0 0 0 0 1 1 1 1 1 0 0 1 1 1 1 1 1 1 0 0 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 1 0 0 0 0 1 1 0 1 1 1 1 1 1 0 0 1 0 1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 1 0 1 1 1 1 1 1 0 0 1 1 1 1 1 0 0 0 0]
+  set p3_7 [ 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 1 0 1 1 1 0 0 0 1 1 1 1 1 0 0 1 1 1 1 1 1 1 0 0 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 1 0 0 0 1 1 1 0 1 1 1 1 1 0 0 0 1 0 1 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 1 0 1 1 1 0 0 1 1 0 1 1 1 1 1 0 0 1 1 1 1 1 1 0 1 0]
+  set p3_8 [ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  set p4_1 [ 0 0 1 1 1 1 0 0 0 1 1 1 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 0 1 1 1 0 0 1 1 0 0 0 1 1 1 1 1 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 0 0 0 0 1 0 0 0 0 0 1 1 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 1 1 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 1 1 1 1 1 0 1 0 0 0 1 0 1 1 0 1 1 1 0 0 0 1 1 1 1 1 1 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 0 1 1 1 1 1 0 0 0 1 1 1 1 1 0 0 0 0]
+  set p4_2 [ 0 0 1 1 1 1 0 0 0 1 1 1 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 0 1 1 1 0 0 1 1 0 0 0 1 1 1 1 1 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 1 1 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 1 1 1 1 1 0 1 0 0 0 1 0 1 1 0 1 1 1 0 0 0 1 1 1 1 1 1 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 0 1 1 1 1 1 0 0 0 1 1 1 1 1 0 0 0 0]
+  set p4_3 [ 0 0 1 1 0 0 0 0 0 1 1 1 0 1 0 0 0 0 0 1 0 0 0 1 0 1 1 1 1 0 0 0 0 1 1 1 0 0 1 1 1 1 1 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 1 1 0 1 1 1 1 0 0 0 0 1 1 1 1 0 1 0 0 1 1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 1 0 0 0 1 0 1 1 0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 1 1 1 1 1 1 0 1 1 1 1 1 0 0 0 0]
+  set p4_4 [ 0 0 1 1 0 0 0 0 0 1 1 1 0 1 0 0 0 0 0 1 0 0 0 1 0 1 1 1 1 0 0 0 0 1 1 1 0 0 1 1 1 1 1 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 1 1 0 1 1 1 1 0 0 0 0 1 1 1 1 0 1 0 0 1 1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 1 0 0 0 1 0 1 1 0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 1 1 1 1 1 1 0 1 1 1 1 1 0 0 0 0]
+  set p4_5 [ 0 0 1 1 1 0 0 0 0 1 1 1 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 1 1 0 0 0 0 1 1 0 0 0 1 1 1 1 1 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 1 1 0 0 0 1 0 0 1 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 1 1 1 1 1 1 0 0 0 1 1 1 0 0 0 0 0 1 1 1 0 0 0 0 0 1 1 1 1 1 1 1 0 1 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 1 1 1 1 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 1 1 1 1 0 1 0 0 0 0 1 1 1 1 1 0 0 0 0]
+  set p4_6 [ 0 0 1 1 1 0 0 0 0 1 1 1 0 1 0 0 0 0 0 1 0 0 0 1 0 0 1 1 1 0 0 0 0 1 1 0 0 0 1 1 1 1 1 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 1 1 1 0 0 0 0 1 1 1 0 0 1 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 0 0 0 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 0 1 0 0 0 1 0 1 1 0 0 0 0 0 0 1 1 1 1 1 1 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 1 1 1 0 1 1 1 1 0 0 1 1 1 1 1 0 0 0 0]
+  set p4_7 [ 0 0 1 1 1 1 1 0 0 1 1 1 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 1 1 0 0 0 0 1 1 0 0 0 1 1 1 1 1 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 1 0 0 0 0 1 1 0 0 0 1 0 0 1 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 1 1 1 1 1 1 0 0 0 1 1 1 0 0 0 0 0 1 1 1 0 0 0 0 0 1 1 1 1 1 1 1 0 1 0 0 0 1 0 1 1 0 0 0 0 0 0 1 1 1 1 1 1 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 0 1 0 1 0 1 0 1 1 1 0 0 1 1 1 1 0 1 1 1 0 0 1 1 1 1 1 1 0 1 0]
+  set p4_8 [ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 1 0 1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+
+end
+to go
+  let t-now time:create "now"
+  let counter 0
+  let musiclist [ 0 13.55 17.475 17.575 20.939999999999998 21.145 21.314999999999998 21.750999999999998 24.104 24.204 26.347 29.250999999999998 32.896 33.176 33.246 33.316 33.386 33.737 33.807 33.877 33.947 34.298 34.858 36.541 37.662 39.064 39.134 39.204 39.274 41.698 41.798 43.480000000000004 44.111000000000004 45.407000000000004 46.634 47.936 48.216 48.497 48.777 49.058 49.338 49.618 49.899 50.179 50.284 51.931000000000004 52.142 52.702 53.824 56.347 62.02 68.40299999999999 68.964 69.52499999999999 70.085 70.646 70.786 71.207 71.347 71.487 71.628 74.57199999999999 74.79899999999999 75.13199999999999 75.518 75.553 75.588 75.62299999999999 79.618 80.17899999999999 80.74 81.3 81.86099999999999 83.54299999999999 83.75399999999999 83.92899999999999 84.244 84.66499999999999 84.765 85.946 86.157 86.907 88.02499999999999 89.386 89.877 90.359 90.6 90.96 91.259 91.49799999999999 91.737 96.08399999999999 96.74799999999999 97.16499999999999 97.701 97.99799999999999 98.53399999999999 99.00999999999999 99.54599999999999 99.90299999999999 108.94099999999999 109.17899999999999 109.41699999999999 109.71499999999999 110.122 110.598 117.75099999999999 118.22699999999999 118.70299999999999 119.17899999999999 119.824 123.58399999999999 127.27499999999999 127.75099999999999 128.227 128.703 129.179 129.417 129.655 129.893 130.131 130.369 130.607 130.845 131.084 131.322 131.56 131.798 132.036 132.274 132.512 132.75 132.989 133.108 133.227 133.346 133.465 133.584 133.703 133.822 133.941 134.179 134.417 134.655 134.894 134.994 136.56 136.679 138.465 138.584 140.608 141.084 141.56 142.036 142.751 146.56 148.227 148.286 148.346 148.405 148.465 148.524 148.584 148.643 148.703 148.733 148.763 148.793 148.822 148.881 148.941 149.0 149.06 149.119 149.179 149.238 149.298 149.327 149.357 149.387 149.417 150.132 152.677 155.499 156.558 156.658 156.911 157.97 158.07 158.676 159.382 160.087 160.26399999999998 160.441 160.863 165.382 165.73499999999999 166.087 166.44 171.029 171.382 171.73499999999999 172.088 172.441 181.26399999999998 182.323 182.676 183.029 183.382 183.73499999999999 185.146 186.558 187.97 190.783 192.195 193.617 195.029 196.441 197.852 199.26399999999998 202.087 202.793 203.499 203.676 203.85299999999998 204.03 204.207 204.384 204.561 204.738 204.915 205.09199999999998 205.269 205.446 205.623 205.79999999999998 205.977 206.102 206.676 207.029 207.381 207.73399999999998 208.087 208.26399999999998 208.441 208.618 208.795 208.972 209.149 209.323 220.441 220.617 220.79399999999998 220.97 221.147 221.852 222.117 222.382 222.549 222.599 223.26399999999998 223.441 223.617 223.79399999999998 223.97 224.676 224.941 225.20499999999998 225.382 231.73499999999999 233.499 233.588 235.26399999999998 ]
+
+  sound:play-sound "song2.wav"
+  while [counter < length musiclist] [
+    if stop_song = 1 [stop]
+
+    print time:difference-between (t-now) (time:create "now") "seconds"
+    tick
+    if item counter musiclist < time:difference-between (t-now) (time:create "now") "seconds" [
+      p1_lights item counter p1_1 item counter p1_2 item counter p1_3 item counter p1_4 item counter p1_5 item counter p1_6 item counter p1_7 item counter p1_8
+      p2_lights item counter p2_1 item counter p2_2 item counter p2_3 item counter p2_4 item counter p2_5 item counter p2_6 item counter p2_7 item counter p2_8
+      p3_lights item counter p3_1 item counter p3_2 item counter p3_3 item counter p3_4 item counter p3_5 item counter p3_6 item counter p3_7 item counter p3_8
+      p4_lights item counter p4_1 item counter p4_2 item counter p4_3 item counter p4_4 item counter p4_5 item counter p4_6 item counter p4_7 item counter p4_8
+      type "did time: " type item counter musiclist type "\n"
+      set counter counter + 1]
+  ]
+end
+
+
+to p1_lights [aa bb cc dd ee ff gg hh]
+  ifelse aa = 0
+  [ask left_arm 0 [ set hidden? true ]]
+  [ask left_arm 0 [ set hidden? false ]]
+  ifelse bb = 0
+  [ask right_arm 1 [ set hidden? true ]]
+  [ask right_arm 1 [ set hidden? false ]]
+  ifelse cc = 0
+  [ask left_leg 2 [ set hidden? true ]]
+  [ask left_leg 2 [ set hidden? false ]]
+  ifelse dd = 0
+  [ask right_leg 3 [ set hidden? true ]]
+  [ask right_leg 3 [ set hidden? false ]]
+  ifelse ee = 0
+  [ask head_back 4 [ set hidden? true ]]
+  [ask head_back 4 [ set hidden? false ]]
+  ifelse gg = 0
+  [ask yellow_p 5 [ set hidden? true ]]
+  [ask yellow_p 5 [ set hidden? false ]]
+  ifelse hh = 0
+  [ask red_p 6 [ set hidden? true ]]
+  [ask red_p 6 [ set hidden? false ]]
+  ifelse ff    = 0
+  [ask white_bottom 7 [ set hidden? true ]]
+  [ask white_bottom 7 [ set hidden? false ]]
+end
+
+to p2_lights [aa bb cc dd ee ff gg hh]
+  ifelse aa = 0
+  [ask left_arm 8 [ set hidden? true ]]
+  [ask left_arm 8 [ set hidden? false ]]
+  ifelse bb = 0
+  [ask right_arm 9 [ set hidden? true ]]
+  [ask right_arm 9 [ set hidden? false ]]
+  ifelse cc = 0
+  [ask left_leg 10 [ set hidden? true ]]
+  [ask left_leg 10 [ set hidden? false ]]
+  ifelse dd = 0
+  [ask right_leg 11 [ set hidden? true ]]
+  [ask right_leg 11 [ set hidden? false ]]
+  ifelse ee = 0
+  [ask head_back 12 [ set hidden? true ]]
+  [ask head_back 12 [ set hidden? false ]]
+  ifelse gg = 0
+  [ask yellow_p 13 [ set hidden? true ]]
+  [ask yellow_p 13 [ set hidden? false ]]
+  ifelse hh = 0
+  [ask red_p 14 [ set hidden? true ]]
+  [ask red_p 14 [ set hidden? false ]]
+  ifelse ff = 0
+  [ask white_bottom 15 [ set hidden? true ]]
+  [ask white_bottom 15 [ set hidden? false ]]
+end
+
+to p3_lights [aa bb cc dd ee ff gg hh]
+  ifelse aa = 0
+  [ask left_arm 16 [ set hidden? true ]]
+  [ask left_arm 16 [ set hidden? false ]]
+  ifelse bb = 0
+  [ask right_arm 17 [ set hidden? true ]]
+  [ask right_arm 17 [ set hidden? false ]]
+  ifelse cc = 0
+  [ask left_leg 18 [ set hidden? true ]]
+  [ask left_leg 18 [ set hidden? false ]]
+  ifelse dd = 0
+  [ask right_leg 19 [ set hidden? true ]]
+  [ask right_leg 19 [ set hidden? false ]]
+  ifelse ee = 0
+  [ask head_back 20 [ set hidden? true ]]
+  [ask head_back 20 [ set hidden? false ]]
+  ifelse gg = 0
+  [ask yellow_p 21 [ set hidden? true ]]
+  [ask yellow_p 21 [ set hidden? false ]]
+  ifelse hh = 0
+  [ask red_p 22 [ set hidden? true ]]
+  [ask red_p 22 [ set hidden? false ]]
+  ifelse ff = 0
+  [ask white_bottom 23 [ set hidden? true ]]
+  [ask white_bottom 23 [ set hidden? false ]]
+end
+
+to p4_lights [aa bb cc dd ee ff gg hh]
+  ifelse aa = 0
+  [ask left_arm 24 [ set hidden? true ]]
+  [ask left_arm 24 [ set hidden? false ]]
+  ifelse bb = 0
+  [ask right_arm 25 [ set hidden? true ]]
+  [ask right_arm 25 [ set hidden? false ]]
+  ifelse cc = 0
+  [ask left_leg 26 [ set hidden? true ]]
+  [ask left_leg 26 [ set hidden? false ]]
+  ifelse dd = 0
+  [ask right_leg 27 [ set hidden? true ]]
+  [ask right_leg 27 [ set hidden? false ]]
+  ifelse ee = 0
+  [ask head_back 28 [ set hidden? true ]]
+  [ask head_back 28 [ set hidden? false ]]
+  ifelse gg = 0
+  [ask yellow_p 29 [ set hidden? true ]]
+  [ask yellow_p 29 [ set hidden? false ]]
+  ifelse hh = 0
+  [ask red_p 30 [ set hidden? true ]]
+  [ask red_p 30 [ set hidden? false ]]
+  ifelse ff = 0
+  [ask white_bottom 31 [ set hidden? true ]]
+  [ask white_bottom 31 [ set hidden? false ]]
+end
+
+;T-pose
+  ;p1
+  ;create-left_arms 1 [set size 20 set heading -90 set xcor -37 set ycor 10]
+  ;create-right_arms 1 [set size 20 set heading 90 set xcor -53 set ycor 10]
+  ;create-left_legs 1 [set size 20 set heading 0 set xcor -43 set ycor -5]
+  ;create-right_legs 1 [set size 20 set heading 0 set xcor -47 set ycor -5]
+  ;create-head_backs 1 [set size 20 set heading 0 set xcor -45 set ycor 13]
+  ;create-yellow_ps 1 [set size 20 set heading 0 set xcor -45 set ycor 7]
+  ;create-red_ps 1 [set size 20 set heading 0 set xcor -45 set ycor 7]
+  ;create-white_bottoms 1 [set size 20 set heading 0 set xcor -45 set ycor 3]
+  ;;p2
+  ;create-left_arms 1 [set size 20 set heading -90 set xcor -7 set ycor 10]
+  ;create-right_arms 1 [set size 20 set heading 90 set xcor -23 set ycor 10]
+  ;create-left_legs 1 [set size 20 set heading 0 set xcor -13 set ycor -5]
+  ;create-right_legs 1 [set size 20 set heading 0 set xcor -17 set ycor -5]
+  ;create-head_backs 1 [set size 20 set heading 0 set xcor -15 set ycor 13]
+  ;create-yellow_ps 1 [set size 20 set heading 0 set xcor -15 set ycor 7]
+  ;create-red_ps 1 [set size 20 set heading 0 set xcor -15 set ycor 7]
+  ;create-white_bottoms 1 [set size 20 set heading 0 set xcor -15 set ycor 3]
+  ;;p3
+  ;create-left_arms 1 [set size 20 set heading -90 set xcor 23 set ycor 10]
+  ;create-right_arms 1 [set size 20 set heading 90 set xcor 7 set ycor 10]
+  ;create-left_legs 1 [set size 20 set heading 0 set xcor 17 set ycor -5]
+  ;create-right_legs 1 [set size 20 set heading 0 set xcor 13 set ycor -5]
+  ;create-head_backs 1 [set size 20 set heading 0 set xcor 15 set ycor 13]
+  ;create-yellow_ps 1 [set size 20 set heading 0 set xcor 15 set ycor 7]
+  ;create-red_ps 1 [set size 20 set heading 0 set xcor 15 set ycor 7]
+  ;create-white_bottoms 1 [set size 20 set heading 0 set xcor 15 set ycor 3]
+  ;;p4
+  ;create-left_arms 1 [set size 20 set heading -90 set xcor 53 set ycor 10]
+  ;create-right_arms 1 [set size 20 set heading 90 set xcor 37 set ycor 10]
+  ;create-left_legs 1 [set size 20 set heading 0 set xcor 47 set ycor -5]
+  ;create-right_legs 1 [set size 20 set heading 0 set xcor 43 set ycor -5]
+  ;create-head_backs 1 [set size 20 set heading 0 set xcor 45 set ycor 13]
+  ;create-yellow_ps 1 [set size 20 set heading 0 set xcor 45 set ycor 7]
+  ;create-red_ps 1 [set size 20 set heading 0 set xcor 45 set ycor 7]
+  ;create-white_bottoms 1 [set size 20 set heading 0 set xcor 45 set ycor 3]
